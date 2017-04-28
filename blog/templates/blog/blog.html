@@ -1,0 +1,28 @@
+{% extends "blog/header.html" %}
+
+{% block content %}
+<section class="about">
+  
+
+
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <h3> Welcome! </h3>
+      </div>
+    </div><!--end of .row-->
+    <div class="row bottom">
+      <div class="two-thirds column">
+            <p>This is my blog! I don't know what I am going to write in here since I am just pleb status
+            and don't really know how to do anything in webdev but hey! I am trying at least!</p>
+      </div>
+      <div class="one-third column">
+          {% for post in object_list %}
+			      <a class="button button-primary" href="{{post.id}}">{{ post.title }}</a>
+	        {% endfor %}
+      </div>
+    </div>
+    </div><!--end of .row-->
+  </div><!--end of .container-->
+</section>
+{% endblock %}
