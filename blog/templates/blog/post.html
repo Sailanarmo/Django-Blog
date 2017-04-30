@@ -11,11 +11,11 @@
     </div><!--end of .row-->
       <div class = "row bottom">
         <div class="two-thirds column">
-          {{ post.body }}
+          {{ post.body | linebreaks }}
         </div>
         <div class="one-third column">
           {% for post in object_list %}
-			      <a class="button button-primary" href="{{post.id}}">Y no Work?</a>
+			      <a class="button button-primary" href="{{post.id}}">{{post.title}}</a>
 	        {% endfor %}
             <a class="button button-primary" href="https://final-blog-project-sailanarmo.c9users.io">Return Home</a>
         </div>
